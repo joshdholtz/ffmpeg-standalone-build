@@ -40,7 +40,7 @@ LIBDRM=$(PREFIX)/lib/libdrm.so
 PCIACCESS=$(PREFIX)/lib/libpciaccess.so
 XORGMACRO=$(PREFIX)/share/pkgconfig/xorg-macros.pc
 FDK_AAC=$(PREFIX)/lib/libfdk-aac.so
-MYSOFA=$(PREFIX)/lib/libmysofa.so
+MYSOFA=$(PREFIX)/lib/libmysofa.sonasm
 OPENJPEG=$(PREFIX)/lib/libopenjp2.so
 OPENMPT=$(PREFIX)/lib/libopenmpt.so
 OGG=$(PREFIX)/lib/libogg.so
@@ -92,7 +92,7 @@ $(CMAKE): $(CURDIR)/cmake-3.15.0-Linux-x86_64.tar.gz
 	tar xf $(CURDIR)/cmake-3.15.0-Linux-x86_64.tar.gz
 	touch $(CMAKE)
 
-NASM_DIR := nasm-2.13.03
+NASM_DIR := nasm-2.14.02
 $(NASM_DIR)/config.status: $(DEPS) $(NASM_DIR).tar.bz2
 	@echo Configuring nasm
 	rm -rf $(NASM_DIR) 
